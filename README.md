@@ -28,4 +28,16 @@ Use [Weave Scope](http://weave.works/products/weave-scope/) or [Weave Cloud](htt
 
 ![Sock Shop in Weave Scope](https://github.com/microservices-demo/microservices-demo.github.io/raw/master/assets/sockshop-scope.png)
 
-## 
+## Install Git and Clone the Microservice Repository
+1. Install Git: `sudo apt-get install git`
+2. Switch to the user's home directory: `cd ~`
+3. Clone the Microservice repo: `git clone https://github.com/linuxacademy/microservices-demo`
+
+## Install the Microservice Application to the Cluster
+
+1. Create a namespace for the application: `kubectl create namespace sock-shop`
+2. Install the microservice application under the sock-shop namespace: `kubectl -n sock-shop create -f complete-demo.yaml`
+3. List the pods for the newly created application." `kubectl get pods -n sock-shop`
+
+Note: Using -w allows you to view the pods as they start-up in real-time: `kubectl get pods -n sock-shop -w`
+
